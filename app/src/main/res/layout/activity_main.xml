@@ -10,12 +10,12 @@
 
 
     <EditText
-        android:id="@+id/search"
+        android:id="@+id/timeLimit"
         android:layout_width="244dp"
         android:layout_height="61dp"
         android:layout_marginStart="68dp"
         android:hint="Please time limit in seconds"
-        android:inputType="text"
+        android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="118dp"
         tools:ignore="MissingConstraints"

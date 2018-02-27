@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 /**
@@ -25,10 +26,16 @@ class Main3Activity extends AppCompatActivity{
         setContentView(R.layout.activity_main3);
         View myView = (View) findViewById(R.id.myView);
 
+        EditText enteredTimeLimit = (EditText) findViewById(R.id.timeLimit);
+       
+        int time = Integer.parseInt (enteredTimeLimit.getText().toString());
+       int timeInMillis = time *1000;
+
+
 
         final CountDownTimer timer;
         {
-            timer = new CountDownTimer(1000, 1000) {
+            timer = new CountDownTimer(timeInMillis, 1000) {
 
                 @Override
                 public void onTick(long timeleft) {}
